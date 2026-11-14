@@ -1,0 +1,34 @@
+ComfyUI-Anima29-LegacyLoRA v1.4.1
+
+INSTALL
+=======
+
+Copy or extract:
+
+ComfyUI/custom_nodes/ComfyUI-Anima29-LegacyLoRA/
+
+into your ComfyUI installation so that this file exists:
+
+ComfyUI/custom_nodes/ComfyUI-Anima29-LegacyLoRA/__init__.py
+
+If an older version is installed, replace the old folder.
+Restart ComfyUI completely.
+
+Recommended Anima 3.8B node:
+  Anima 3.8B Universal LoRA Loader (Auto 28L / 40L / 52L)
+
+It accepts:
+  28L legacy LoRA -> 28->40->52
+  40L Anima 2.9B LoRA -> 40->52
+  52L Anima 3.8B LoRA -> direct
+
+For ambiguous partial LoRAs, change source_type from auto to 28L / 40L / 52L manually.
+
+
+IMPORTANT FOR v1.4 USERS
+========================
+v1.4.1 fixes the Anima38AutoLoRALoader auto-detection error:
+  NameError: name 'Path' is not defined
+
+Replace the entire existing ComfyUI-Anima29-LegacyLoRA folder,
+then fully restart ComfyUI.
